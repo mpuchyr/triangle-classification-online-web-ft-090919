@@ -14,8 +14,6 @@ class Triangle
       raise TriangleError
     elsif sides.any? {|side| (side == 0) || (side < 0)} 
       raise TriangleError
-    # elsif sides.any? {|side| side < 0}
-    #   raise TriangleError
     else
       if sides.uniq.length == 1
         :equilateral
