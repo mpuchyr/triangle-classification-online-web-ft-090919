@@ -11,23 +11,11 @@ class Triangle
     sides = [@side_a, @side_b, @side_c]
     sorted_sides = sides.sort
     if sorted_sides[0] + sorted_sides[1] < sorted_sides[2] 
-      begin 
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.inequality
-      end
+      raise TriangleError
     elsif sides.any? {|side| side == 0}
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.no_side
-      end
+      raise TriangleError
     elsif sides.any? {|side| side < 0}
-      begin
-        raise TriangleError
-      rescue TriangleError => error
-        puts error.negative_side
-      end
+      raise TriangleError
     else
       if sides.uniq.length == 1
         :equilateral
