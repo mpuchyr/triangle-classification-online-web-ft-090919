@@ -12,10 +12,10 @@ class Triangle
     sorted_sides = sides.sort
     if sorted_sides[0] + sorted_sides[1] <= sorted_sides[2] 
       raise TriangleError
-    elsif sides.any? {|side| side == 0}
+    elsif sides.any? {|side| (side == 0) || (side < 0)} 
       raise TriangleError
-    elsif sides.any? {|side| side < 0}
-      raise TriangleError
+    # elsif sides.any? {|side| side < 0}
+    #   raise TriangleError
     else
       if sides.uniq.length == 1
         :equilateral
