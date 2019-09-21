@@ -10,7 +10,7 @@ class Triangle
   def kind
     sides = [@side_a, @side_b, @side_c]
     sorted_sides = sides.sort
-    if sorted_sides[0] + sorted_sides[1] < sorted_sides[2] 
+    if sorted_sides[0] + sorted_sides[1] <= sorted_sides[2] 
       raise TriangleError
     elsif sides.any? {|side| side == 0}
       raise TriangleError
