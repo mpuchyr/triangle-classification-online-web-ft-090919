@@ -32,7 +32,9 @@ class Triangle
       if sides.uniq.length == 1
         :equilateral
       elsif sides.uniq.length == 2
-        
+        :isosceles
+      else
+        :scalene
       end
     end
     
