@@ -29,18 +29,6 @@ class Triangle
   end
   
   class TriangleError < StandardError
-    def inqeuality
-      "The length of any two sides of a triangle must exceed the length of the third side"
-    end
-    
-    def no_side
-      "A triangle cannot have a side with no length"
-    end
-    
-    def negative_side
-      "A side of a triangle cannot be a negative number"
-    end
-    
   end
   
   
